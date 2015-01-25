@@ -249,9 +249,9 @@
 		2E3FFAA01A749BFF008E2A8C /* Lambda.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Lambda.h; path = Lambda/Lambda.h; sourceTree = "<group>"; };
 		2E3FFAA11A749C61008E2A8C /* AWSLambda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSLambda.h; path = Lambda/AWSLambda.h; sourceTree = "<group>"; };
 		2E3FFAA21A749C61008E2A8C /* AWSLambda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSLambda.m; path = Lambda/AWSLambda.m; sourceTree = "<group>"; };
-		2E3FFAA41A749F59008E2A8C /* lambda-2014-11-13.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "lambda-2014-11-13.json"; path = "Lambda/Resource/lambda-2014-11-13.json"; sourceTree = "<group>"; };
 		2E3FFAA61A74A1CF008E2A8C /* AWSLambdaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSLambdaModel.h; path = Lambda/AWSLambdaModel.h; sourceTree = "<group>"; };
 		2E3FFAA71A74A1CF008E2A8C /* AWSLambdaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSLambdaModel.m; path = Lambda/AWSLambdaModel.m; sourceTree = "<group>"; };
+		2E3FFAB21A74BB07008E2A8C /* lambda-2014-11-13.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "lambda-2014-11-13.json"; path = "Lambda/Resources/lambda-2014-11-13.json"; sourceTree = "<group>"; };
 		38627E3E19253F5500EF30EF /* AWSCognitoIdentityServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AWSCognitoIdentityServiceTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		388CA0A11926CA3800AF5A50 /* AWSCognitoCredentialsProviderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AWSCognitoCredentialsProviderTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		38D2089219C2A67D0024D82A /* AWSIdentityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSIdentityProvider.h; sourceTree = "<group>"; };
@@ -735,17 +735,17 @@
 				2E3FFAA21A749C61008E2A8C /* AWSLambda.m */,
 				2E3FFAA61A74A1CF008E2A8C /* AWSLambdaModel.h */,
 				2E3FFAA71A74A1CF008E2A8C /* AWSLambdaModel.m */,
-				2E3FFAA51A749F5F008E2A8C /* Resource */,
+				2E3FFAA51A749F5F008E2A8C /* Resources */,
 			);
 			name = Lambda;
 			sourceTree = "<group>";
 		};
-		2E3FFAA51A749F5F008E2A8C /* Resource */ = {
+		2E3FFAA51A749F5F008E2A8C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2E3FFAA41A749F59008E2A8C /* lambda-2014-11-13.json */,
+				2E3FFAB21A74BB07008E2A8C /* lambda-2014-11-13.json */,
 			);
-			name = Resource;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		9482398C38EAC2851C1B6F50 /* Pods */ = {
