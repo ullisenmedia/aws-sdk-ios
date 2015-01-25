@@ -18,5 +18,6 @@
 
 - (instancetype)initWithConfiguration:(AWSServiceConfiguration *)configuration;
 
+- (BFTask *)invokeAsync:(AWSLambdaInvokeAsyncRequest *)request ;
 
 @end
