@@ -66,6 +66,12 @@ Pod::Spec.new do |s|
     kinesis.resources = ['Kinesis/Resources/*.json']
   end
 
+  s.subspec 'Lambda' do |lambda|
+  lamdba.dependency 'AWSiOSSDKv2/AWSCore'
+  lamdba.source_files = 'Lambda/*.{h,m}'
+  lamdba.resources = ['Lambda/Resources/*.json']
+  end
+
   s.subspec 'S3' do |s3|
   	s3.dependency 'AWSiOSSDKv2/AWSCore'
     s3.source_files = 'S3/*.{h,m}'
