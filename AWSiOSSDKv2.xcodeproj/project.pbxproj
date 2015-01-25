@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E3FFAA31A749C61008E2A8C /* AWSLambda.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3FFAA21A749C61008E2A8C /* AWSLambda.m */; };
+		2E3FFAA81A74A1CF008E2A8C /* AWSLambdaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3FFAA71A74A1CF008E2A8C /* AWSLambdaModel.m */; };
 		38627E3F19253F5500EF30EF /* AWSCognitoIdentityServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38627E3E19253F5500EF30EF /* AWSCognitoIdentityServiceTests.m */; };
 		388CA0A21926CA3800AF5A50 /* AWSCognitoCredentialsProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 388CA0A11926CA3800AF5A50 /* AWSCognitoCredentialsProviderTests.m */; };
 		38D2089419C2A67D0024D82A /* AWSIdentityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2089319C2A67D0024D82A /* AWSIdentityProvider.m */; };
@@ -244,6 +246,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E3FFAA01A749BFF008E2A8C /* Lambda.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Lambda.h; path = Lambda/Lambda.h; sourceTree = "<group>"; };
+		2E3FFAA11A749C61008E2A8C /* AWSLambda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSLambda.h; path = Lambda/AWSLambda.h; sourceTree = "<group>"; };
+		2E3FFAA21A749C61008E2A8C /* AWSLambda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSLambda.m; path = Lambda/AWSLambda.m; sourceTree = "<group>"; };
+		2E3FFAA41A749F59008E2A8C /* lambda-2014-11-13.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "lambda-2014-11-13.json"; path = "Lambda/Resource/lambda-2014-11-13.json"; sourceTree = "<group>"; };
+		2E3FFAA61A74A1CF008E2A8C /* AWSLambdaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSLambdaModel.h; path = Lambda/AWSLambdaModel.h; sourceTree = "<group>"; };
+		2E3FFAA71A74A1CF008E2A8C /* AWSLambdaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSLambdaModel.m; path = Lambda/AWSLambdaModel.m; sourceTree = "<group>"; };
 		38627E3E19253F5500EF30EF /* AWSCognitoIdentityServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AWSCognitoIdentityServiceTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		388CA0A11926CA3800AF5A50 /* AWSCognitoCredentialsProviderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AWSCognitoCredentialsProviderTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		38D2089219C2A67D0024D82A /* AWSIdentityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSIdentityProvider.h; sourceTree = "<group>"; };
@@ -719,6 +727,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E3FFA9F1A749BB1008E2A8C /* Lambda */ = {
+			isa = PBXGroup;
+			children = (
+				2E3FFAA01A749BFF008E2A8C /* Lambda.h */,
+				2E3FFAA11A749C61008E2A8C /* AWSLambda.h */,
+				2E3FFAA21A749C61008E2A8C /* AWSLambda.m */,
+				2E3FFAA61A74A1CF008E2A8C /* AWSLambdaModel.h */,
+				2E3FFAA71A74A1CF008E2A8C /* AWSLambdaModel.m */,
+				2E3FFAA51A749F5F008E2A8C /* Resource */,
+			);
+			name = Lambda;
+			sourceTree = "<group>";
+		};
+		2E3FFAA51A749F5F008E2A8C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2E3FFAA41A749F59008E2A8C /* lambda-2014-11-13.json */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		9482398C38EAC2851C1B6F50 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1406,6 +1435,7 @@
 				CE372B2B18DA874000D2CFD2 /* EC2 */,
 				CE372B3318DA874000D2CFD2 /* ElasticLoadBalancing */,
 				CE372B3B18DA874000D2CFD2 /* Kinesis */,
+				2E3FFA9F1A749BB1008E2A8C /* Lambda */,
 				CE372B4318DA874000D2CFD2 /* S3 */,
 				CE372B4B18DA874000D2CFD2 /* SES */,
 				CE372B5318DA874000D2CFD2 /* SimpleDB */,
@@ -2213,6 +2243,7 @@
 				EA2AF815195E206B007DDDD4 /* AWSMobileAnalyticsConfigurationKeys.m in Sources */,
 				EA2AF826195E206B007DDDD4 /* AWSMobileAnalyticsIOSConnectivity.m in Sources */,
 				CE372B7518DA874000D2CFD2 /* AWSCloudWatch.m in Sources */,
+				2E3FFAA81A74A1CF008E2A8C /* AWSLambdaModel.m in Sources */,
 				CED6C36618EE3EC800A56FB2 /* AWSS3TransferManager.m in Sources */,
 				EA2AF832195E206B007DDDD4 /* AWSMobileAnalyticsERSRequestBuilder.m in Sources */,
 				CE372B8818DA874000D2CFD2 /* AWSSQSModel.m in Sources */,
@@ -2224,6 +2255,7 @@
 				EA2AF80E195E206B007DDDD4 /* AWSMobileAnalyticsIOSClientContext.m in Sources */,
 				CE372B7818DA874000D2CFD2 /* AWSDynamoDBModel.m in Sources */,
 				EA2AF839195E206B007DDDD4 /* AWSMobileAnalyticsMonetizationEventBuilder.m in Sources */,
+				2E3FFAA31A749C61008E2A8C /* AWSLambda.m in Sources */,
 				EA2AF81B195E206B007DDDD4 /* AWSMobileAnalyticsDefaultResponse.m in Sources */,
 				EA2AF82B195E206B007DDDD4 /* AWSMobileAnalyticsDateUtils.m in Sources */,
 				CEE68C17193FB11A00259EFF /* AWSKinesisRecorder.m in Sources */,
