@@ -212,6 +212,7 @@ NSString *const AWSServiceNameSQS = @"sqs";
 NSString *const AWSServiceNameSTS = @"sts";
 
 NSString *const AWSServiceNameMobileAnalytics = @"mobileanalytics";
+NSString *const AWSServiceNameLambda = @"lambda";
 
 @interface AWSEndpoint()
 
@@ -323,6 +324,9 @@ NSString *const AWSServiceNameMobileAnalytics = @"mobileanalytics";
                 break;
             case AWSServiceSTS:
                 _serviceName = AWSServiceNameSTS;
+                break;
+            case AWSServiceLambda:
+                _serviceName = AWSServiceNameLambda;
                 break;
             case AWSServiceMobileAnalytics:
                 _serviceName = AWSServiceNameMobileAnalytics;
