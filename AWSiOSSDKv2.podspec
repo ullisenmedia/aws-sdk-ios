@@ -67,9 +67,9 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Lambda' do |lambda|
-    lamdba.dependency 'AWSiOSSDKv2/AWSCore'
-    lamdba.source_files = 'Lambda/*.{h,m}'
-    lamdba.resources = ['Lambda/Resources/*.json']
+    lambda.dependency 'AWSiOSSDKv2/AWSCore'
+    lambda.source_files = 'Lambda/*.{h,m}'
+    lambda.resources = ['Lambda/Resources/*.json']
   end
 
   s.subspec 'S3' do |s3|
