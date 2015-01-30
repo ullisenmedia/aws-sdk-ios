@@ -17,7 +17,7 @@
 #import "AWSURLResponseSerialization.h"
 #import "AWSURLRequestRetryHandler.h"
 
-NSString *const AWSLambdaDefinitionFileName = @"dynamodb-2012-08-10";
+NSString *const AWSLambdaDefinitionFileName = @"lambda-2014-11-13";
 
 @interface AWSLambdaResponseSerializer : AWSJSONResponseSerializer
 
@@ -52,8 +52,8 @@ static NSDictionary *errorCodeDictionary = nil;
 
 #pragma mark -
 
-+ (instancetype)serializerWithOutputClass:(Class)outputClass resource:(NSString *)resource actionName:(NSString *)actionName
-{
++ (instancetype)serializerWithOutputClass:(Class)outputClass resource:(NSString *)resource actionName:(NSString *)actionName {
+    
     AWSLambdaResponseSerializer *serializer = [AWSLambdaResponseSerializer serializerWithResource:resource actionName:actionName];
     
     serializer.outputClass = outputClass;
@@ -176,7 +176,7 @@ static NSDictionary *errorCodeDictionary = nil;
         _configuration = [configuration copy];
         
         _configuration.endpoint = [AWSEndpoint endpointWithRegion:_configuration.regionType
-                                                          service:AWSServiceDynamoDB];
+                                                          service:AWSServiceLambda];
         
         AWSSignatureV4Signer *signer = [AWSSignatureV4Signer signerWithCredentialsProvider:_configuration.credentialsProvider
                                                                                   endpoint:_configuration.endpoint];
@@ -206,15 +206,18 @@ static NSDictionary *errorCodeDictionary = nil;
     }
     
     AWSNetworkingRequest *networkingRequest = request.internalRequest;
+    
     if (request) {
         networkingRequest.parameters = [[MTLJSONAdapter JSONDictionaryFromModel:request] aws_removeNullValues];
     } else {
         networkingRequest.parameters = @{};
     }
+    
     NSMutableDictionary *headers = [NSMutableDictionary new];
     headers[@"X-Amz-Target"] = [NSString stringWithFormat:@"%@.%@", targetPrefix, operationName];
     networkingRequest.headers = headers;
     networkingRequest.HTTPMethod = HTTPMethod;
+    networkingRequest.URLString = URLString;
     networkingRequest.responseSerializer = [AWSLambdaResponseSerializer serializerWithOutputClass:outputClass resource:AWSLambdaDefinitionFileName actionName:operationName];
     networkingRequest.requestSerializer = [AWSJSONRequestSerializer serializerWithResource:AWSLambdaDefinitionFileName actionName:operationName];
     
@@ -227,7 +230,7 @@ static NSDictionary *errorCodeDictionary = nil;
     
     return [self invokeRequest:request
                     HTTPMethod:AWSHTTPMethodPOST
-                     URLString:@"/function/{FunctionName}/invoke-async"
+                     URLString:@"/2014-11-13/functions/{FunctionName}/invoke-async"
                   targetPrefix:@""
                  operationName:@"InvokeAsync"
                    outputClass:nil];
